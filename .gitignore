@@ -1,0 +1,24 @@
+terraform.tfvars
+*tfvars
+# Local Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs
+crash.log
+
+# Override files that may contain secrets
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Optional: editor-specific files
+*.swp
+*.vscode/
