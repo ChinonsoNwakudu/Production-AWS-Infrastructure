@@ -4,7 +4,7 @@ resource "aws_launch_template" "web" {
   instance_type          = "t3.micro"
   vpc_security_group_ids = [var.web_sg_id]
   iam_instance_profile {
-    name = var.ec2_instance_profile_name 
+    name = var.ec2_instance_profile_name
   }
   user_data = base64encode(<<-EOF
               #!/bin/bash
@@ -13,7 +13,19 @@ resource "aws_launch_template" "web" {
               systemctl start httpd
               EOF
   ) # Simple web server bootstrap
-  tags = var.project_tags
+  tag_specifications {
+    resource_type = "instance"
+    tags = merge(var.project_tags, {
+      Backup = "Daily"
+    })
+  }
+
+  tag_specifications {
+    resource_type = "volume"
+    tags = merge(var.project_tags, {
+      Backup = "Daily"
+    })
+  }
 }
 
 data "aws_ami" "amazon_linux" {
@@ -59,7 +71,9 @@ resource "aws_db_instance" "rds" {
   multi_az               = true
   vpc_security_group_ids = [var.db_sg_id]
   db_subnet_group_name   = aws_db_subnet_group.main.name
-  tags                   = var.project_tags
+  tags = merge(var.project_tags, {
+    Backup = "Daily"
+  })
 }
 
 resource "aws_db_subnet_group" "main" {
@@ -71,6 +85,14 @@ resource "aws_db_subnet_group" "main" {
 resource "aws_s3_bucket" "static" {
   bucket = "prod-static-bucket-${random_id.bucket.hex}"
   tags   = var.project_tags
+}
+
+resource "aws_s3_bucket_versioning" "static_versioning" {
+  bucket = aws_s3_bucket.static.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
 
 resource "random_id" "bucket" {

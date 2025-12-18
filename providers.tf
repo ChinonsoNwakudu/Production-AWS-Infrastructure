@@ -12,4 +12,7 @@ provider "aws" {
 
 }
 
-
+provider "aws" {
+  alias  = "dr"
+  region = "us-west-2"
+}

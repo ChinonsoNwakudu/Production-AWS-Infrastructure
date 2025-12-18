@@ -14,3 +14,9 @@ variable "project_tags" {
 }
 
 // Add more as needed per module
+
+variable "dr_region" {
+  type        = string
+  default     = "us-west-2"
+  description = "Disaster recovery region for replication and backups"
+}
