@@ -60,7 +60,7 @@ resource "aws_iam_role_policy_attachment" "eks_node_attach" {
   role       = aws_iam_role.eks_node_role.name
 }
 
-resource "aws_lb" "app_alb" {
+/* resource "aws_lb" "app_alb" {
   name               = "app-alb"
   internal           = false
   load_balancer_type = "application"
@@ -101,7 +101,7 @@ resource "aws_lb_listener" "https" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.app_tg.arn
   }
-}
+} */
 
 resource "aws_acm_certificate" "cert" {
   domain_name       = "yourdomain.com"  # Replace with your domain; validate via DNS
@@ -112,14 +112,3 @@ resource "aws_acm_certificate" "cert" {
   }
 }
 
-module "eks_app" {
-  source            = "./modules/eks_app"
-  vpc_id            = module.vpc.vpc_id
-  public_subnet_ids = module.vpc.public_subnet_ids
-  private_subnet_ids = module.vpc.private_subnet_ids
-  web_sg_id         = module.security.web_sg_id
-  project_tags      = var.project_tags
-  depends_on        = [module.monitoring]
-}
-
-// After apply, use kubectl to deploy app

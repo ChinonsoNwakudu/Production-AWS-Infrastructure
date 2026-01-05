@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: node
-        image: your-ecr-repo/node-app:latest  # Push your Docker image to ECR
+        image: 398299019522.dkr.ecr.us-east-1.amazonaws.com/node-app:latest 
         ports:
         - containerPort: 3000

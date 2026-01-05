@@ -41,3 +41,13 @@ module "backup_dr" {
 
   depends_on = [module.compute]
 }
+
+module "eks_app" {
+  source            = "./modules/eks_app"
+  vpc_id            = module.vpc.vpc_id
+  public_subnet_ids = module.vpc.public_subnet_ids
+  private_subnet_ids = module.vpc.private_subnet_ids
+  web_sg_id         = module.security.web_sg_id
+  project_tags      = var.project_tags
+  depends_on        = [module.monitoring]
+}
