@@ -36,7 +36,7 @@ This diagram illustrates the full production environment:
 ## Project Structure
 
 ```
-production-aws-infra/
+production-aws-infrastructure/
 ├── main.tf                 # Root module orchestration
 ├── variables.tf            # Global variables
 ├── outputs.tf              # Key resource outputs
