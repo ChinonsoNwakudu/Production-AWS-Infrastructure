@@ -40,7 +40,7 @@ This diagram illustrates the full production environment:
 ## Project Structure
 
 ```
-production-aws-infra/
+production-aws-infrastructure/
 ├── main.tf                 # Root module orchestration
 ├── variables.tf            # Global variables
 ├── outputs.tf              # Key resource outputs
@@ -109,7 +109,7 @@ production-aws-infra/
 - **Monitoring** — View CloudWatch dashboards & alarms in AWS Console
 - **Backup** — Check AWS Backup jobs/vault for EC2 & RDS backups
 
-## Deployment Validation & Screenshots
+## Recommended Screenshots & Verification Outputs
 
 - **EKS cluster and nodes running:**
   ![EKS Nodes](Diagrams/EKS_Nodes.png)
@@ -125,15 +125,6 @@ production-aws-infra/
 
 - **AWS Backup jobs (tag-based):**
   ![AWS Backup Jobs](Diagrams/aws-backup.png)
-
-### Recommended Screenshots to Take
-
-- `kubectl get nodes`
-- `kubectl get pods -A`
-- `kubectl get ingress hello-ingress`
-- AWS Console → S3 → primary bucket with replicated file (side-by-side with DR bucket)
-- CloudWatch → Dashboards → your production dashboard
-- AWS Backup → Jobs or Vault showing recent backups
 
 ## Lessons Learned & Reflections
 
@@ -162,4 +153,6 @@ production-aws-infra/
 **Feel free to explore the code and reach out!**  
 Happy to discuss in interviews or collaborate.
 
-Built by **Sapphire** ([@e3ther_nw](https://twitter.com/e3ther_nw)) — January 2026
+## Contact
+- Built by **Chi** ([@n_nonso](https://x.com/n_nons0)) — January 2026
+- Email: [nwakudue@gmail.com](mailto:nwakudue@gmail.com)
