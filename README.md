@@ -150,5 +150,5 @@ production-aws-infrastructure/
 Happy to discuss in interviews or collaborate.
 
 ## Contact
-- Built by **Sapphire** ([@n_nonso](https://x.com/n_nons0) — January 2026
+- Built by **Chi** ([@n_nonso](https://x.com/n_nons0)) — January 2026
 - Email: [nwakudue@gmail.com](mailto:nwakudue@gmail.com)
