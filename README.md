@@ -105,7 +105,7 @@ production-aws-infrastructure/
 - **Monitoring** — View CloudWatch dashboards & alarms in AWS Console
 - **Backup** — Check AWS Backup jobs/vault for EC2 & RDS backups
 
-## Deployment Validation & Screenshots
+## Recommended Screenshots & Verification Outputs
 
 - **EKS cluster and nodes running:**
   ![EKS Nodes](Diagrams/EKS_Nodes.png)
@@ -121,15 +121,6 @@ production-aws-infrastructure/
 
 - **AWS Backup jobs (tag-based):**
   ![AWS Backup Jobs](Diagrams/aws-backup.png)
-
-### Recommended Screenshots to Take
-
-- `kubectl get nodes`
-- `kubectl get pods -A`
-- `kubectl get ingress hello-ingress`
-- AWS Console → S3 → primary bucket with replicated file (side-by-side with DR bucket)
-- CloudWatch → Dashboards → your production dashboard
-- AWS Backup → Jobs or Vault showing recent backups
 
 ## Lessons Learned & Reflections
 
