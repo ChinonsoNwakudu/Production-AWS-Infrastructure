@@ -149,5 +149,6 @@ production-aws-infrastructure/
 **Feel free to explore the code and reach out!**  
 Happy to discuss in interviews or collaborate.
 
-Built by **Sapphire** ([@e3ther_nw](https://twitter.com/e3ther_nw)) — January 2026
-Email: [nwakudue@gmail.com](mailto:nwakudue@gmail.com)
+## Contact
+- Built by **Sapphire** ([@n_nonso](https://x.com/n_nons0) — January 2026
+- Email: [nwakudue@gmail.com](mailto:nwakudue@gmail.com)
