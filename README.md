@@ -1,5 +1,9 @@
 # Production-Grade AWS Infrastructure with Terraform & EKS
 
+[![Terraform](https://img.shields.io/badge/Terraform-v1.5+-623CE4?style=for-the-badge&logo=terraform)](https://www.terraform.io/)
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![EKS](https://img.shields.io/badge/EKS-Kubernetes-blue?style=for-the-badge&logo=kubernetes)](https://aws.amazon.com/eks/)
+
 A complete, modular, production-ready AWS environment built with Terraform, featuring high availability, disaster recovery, observability, and modern Kubernetes application deployment.
 ## Project Highlights
 
