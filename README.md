@@ -150,3 +150,4 @@ production-aws-infrastructure/
 Happy to discuss in interviews or collaborate.
 
 Built by **Sapphire** ([@e3ther_nw](https://twitter.com/e3ther_nw)) — January 2026
+Email: ([nwakudue@gmail.com])
